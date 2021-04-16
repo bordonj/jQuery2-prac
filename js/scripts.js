@@ -1,3 +1,6 @@
+//business logic
+
+//UI or front-end logic
 $(document).ready(function() {
   $("button#dog").click(function() {
     $("ul#animal").prepend("<li>woof!</li>");
@@ -24,5 +27,18 @@ $(document).ready(function() {
     $('body').removeClass();
     $('body').addClass('green-bg');
   });
-});
 
+  // <img id='show-animal' src='img/bunny.jpeg'></img>
+
+  let imgElement = document.createElement('img');
+  imgElement.src = 'img/bunny.jpeg';
+  imgElement.id = 'show-animal';
+
+  $("button#img").click(function() {
+    $('ul#animal').before(imgElement);
+    $(imgElement).click(function() {
+      $(this).remove();
+    })
+    // $('#show-animal').show();
+  });
+});
