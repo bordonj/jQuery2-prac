@@ -28,6 +28,10 @@ $(document).ready(function() {
     $('body').addClass('green-bg');
   });
 
+  $("button#clear").click(function() {
+    $('body').removeClass('green-bg');
+  });
+
   // <img id='show-animal' src='img/bunny.jpeg'></img>
 
   let imgElement = document.createElement('img');
